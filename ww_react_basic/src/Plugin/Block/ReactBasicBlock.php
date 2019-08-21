@@ -22,7 +22,7 @@ class ReactBasicBlock extends BlockBase {
     $build['react_basic_block'] = [
       '#markup' => '<div id="basic-app"></div>',
       '#attached' => [
-        'library' => 'ww_react_app_basic/react-basic'
+        'library' => 'ww_react_basic/react-basic'
       ],
     ];
 
