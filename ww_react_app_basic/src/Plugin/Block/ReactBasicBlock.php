@@ -20,6 +20,12 @@ class ReactBasicBlock extends BlockBase {
   public function build() {
     $build = [];
     $build['react_basic_block']['#markup'] = 'Implement ReactBasicBlock.';
+    $build['react_basic_block'] = [
+      '#markup' => '<div id="basic-app"></div>',
+      '#attached' => [
+        'library' => 'ww_react_app_basic/react-basic'
+      ],
+    ];
 
     return $build;
   }

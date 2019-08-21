@@ -5,5 +5,5 @@ import Page from './components/Page';
 
 ReactDOM.render(
 <Page />,
-  document.getElementById('root')
+  document.getElementById('basic-app')
 );
