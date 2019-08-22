@@ -1,0 +1,5 @@
+name: 'React App List'
+type: module
+description: 'Basic set up of a react app.'
+core: 8.x
+package: 'WebWash Examples'
