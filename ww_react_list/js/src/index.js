@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Page from './components/Page';
+import App from './components/App';
 
 ReactDOM.render(
-<Page />,
+<App />,
   document.getElementById('list-app')
 );
