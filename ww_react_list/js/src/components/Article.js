@@ -1,5 +1,13 @@
 import React from "react";
 
+/**
+ * Displays an article's title, created and body field.
+ *
+ * @param article
+ * @param returnClick
+ * @returns {*}
+ * @constructor
+ */
 const Article = ({ article, returnClick }) => {
   const { attributes } = article;
   return (

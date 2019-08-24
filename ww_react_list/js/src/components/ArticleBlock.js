@@ -1,48 +1,62 @@
 import React from "react";
 import Article from "./Article";
 
+/**
+ * Lists out articles.
+ */
 class ArticleBlock extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       data: null,
-      displayArticle: null,
+      articleData: null,
     };
   }
 
+  /**
+   * Load articles via Drupal JSON:API.
+   */
   componentDidMount() {
     fetch('/jsonapi/node/article')
       .then(response => response.json())
       .then(data => this.setState({ data: data.data }));
   }
 
+  /**
+   * Add article data to state when clicking on an article link.
+   *
+   * @param article
+   * @param e
+   */
   handleClick(article, e) {
     e.preventDefault();
     this.setState({
-      displayArticle : article
+      articleData : article
     });
   }
 
+  /**
+   * Returns article data from state and displays list.
+   * @param e
+   */
   handleReturnClick(e) {
     e.preventDefault();
-    console.log(e);
     this.setState({
-      displayArticle : null
+      articleData : null
     });
   }
 
   render() {
 
-    const { data, displayArticle } = this.state;
+    const { data, articleData } = this.state;
 
     if (!data) {
       return <p>Loading ...</p>;
     }
 
     // Display actual article.
-    if (displayArticle) {
-      return <Article article={displayArticle} returnClick={this.handleReturnClick.bind(this)} />;
+    if (articleData) {
+      return <Article article={articleData} returnClick={this.handleReturnClick.bind(this)} />;
     }
 
     // Display list of articles.
