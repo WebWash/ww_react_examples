@@ -1,8 +1,6 @@
-# React App Basic
+# Example react app using Laravel-mix.
 
-An example module on how to load a React application.
-
-Commands:
+To create this project yourself, run the following:
 
 `npm install react react-dom -s`
 

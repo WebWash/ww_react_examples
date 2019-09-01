@@ -1,6 +1,3 @@
 react-basic:
   js:
-    js/react_basic_app/dist/index.js: { }
-react-basic-webpack:
-  js:
-    js/react_basic_app_webpack/dist/index.js: { }
+    js/dist/index.js: { }
