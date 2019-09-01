@@ -11,6 +11,7 @@ class ArticleBlock extends React.Component {
       data: null,
       articleData: null,
     };
+    this.handleReturnClick = this.handleReturnClick.bind(this)
   }
 
   /**
@@ -56,7 +57,7 @@ class ArticleBlock extends React.Component {
 
     // Display actual article.
     if (articleData) {
-      return <Article article={articleData} returnClick={this.handleReturnClick.bind(this)} />;
+      return <Article article={articleData} returnClick={this.handleReturnClick} />;
     }
 
     // Display list of articles.
