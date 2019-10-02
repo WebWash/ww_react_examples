@@ -18,7 +18,7 @@ class ArticleBlock extends React.Component {
    * Load articles via Drupal JSON:API.
    */
   componentDidMount() {
-    fetch('/jsonapi/node/article')
+    fetch('/jsonapi/node/article?sort=-created&page[limit]=3')
       .then(response => response.json())
       .then(data => this.setState({ data: data.data }));
   }
