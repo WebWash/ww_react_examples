@@ -8,8 +8,9 @@ class ArticleBlock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
+      data: [],
       articleData: null,
+      loaded: false,
     };
     this.handleReturnClick = this.handleReturnClick.bind(this)
   }
@@ -20,7 +21,7 @@ class ArticleBlock extends React.Component {
   componentDidMount() {
     fetch('/jsonapi/node/article?sort=-created&page[limit]=3')
       .then(response => response.json())
-      .then(data => this.setState({ data: data.data }));
+      .then(data => this.setState({ data: data.data, loaded: true }));
   }
 
   /**
@@ -49,10 +50,13 @@ class ArticleBlock extends React.Component {
 
   render() {
 
-    const { data, articleData } = this.state;
+    const { data, articleData, loaded } = this.state;
 
-    if (!data) {
+    if (!loaded) {
       return <p>Loading ...</p>;
+    }
+    if (data.length === 0) {
+      return <p>No results</p>;
     }
 
     // Display actual article.
