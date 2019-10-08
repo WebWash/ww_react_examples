@@ -1,4 +1,4 @@
-# Example react app using Laravel-mix.
+# Example react app using Laravel-mix
 
 To create this project yourself, run the following:
 
@@ -10,3 +10,5 @@ To test this module:
 - Add this module into your Drupal site.
 - Add the "React basic block" into a region.
 - Go into `js` and compile the JavaScript: `npm run dev`
+
+Read the full tutorial over at https://www.webwash.net/?p=11702
