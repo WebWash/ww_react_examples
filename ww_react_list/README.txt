@@ -11,4 +11,8 @@ To test this module:
 - Add the "React list block" into a region.
 - Go into `js` and compile the JavaScript: `npm run dev`
 
+## Testing on a Drupal site
+- Install Drupal using the standard installation profile. You'll need the Article content type.
+- Install this module and JSON:API
+
 Read the full tutorial over at https://www.webwash.net/?p=11702
